@@ -523,7 +523,7 @@
 
                         <!-- Hidden honeypot field added here -->
                         <div style="display:none;">
-                            <label for="bot-check">Leave this field blank</label>
+                            <label for="bot-check"></label>
                             <input type="text" id="bot-check" name="bot-check">
                         </div>
 
@@ -581,8 +581,94 @@
                             </div>
                         </div>
 
+                        <!-- Conditionally Displayed Address Fields -->
+                        <div id="address-fields" class="hidden space-y-8 pt-4">
+
+                            <!-- Pickup Location Group -->
+                            <div>
+                                <h4
+                                    class="text-white font-semibold mb-3 border-b border-white/10 pb-2 text-sm tracking-wide">
+                                    Pickup Location</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="sm:col-span-2">
+                                        <label for="pickup_street"
+                                            class="block text-xs font-medium text-gray-400 mb-1">Street Address <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="pickup_street" name="pickup_street"
+                                            class="pickup-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="123 Main St">
+                                    </div>
+                                    <div>
+                                        <label for="pickup_city"
+                                            class="block text-xs font-medium text-gray-400 mb-1">City <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="pickup_city" name="pickup_city"
+                                            class="pickup-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="Calgary">
+                                    </div>
+                                    <div>
+                                        <label for="pickup_province"
+                                            class="block text-xs font-medium text-gray-400 mb-1">Province <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="pickup_province" name="pickup_province"
+                                            class="pickup-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="AB">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="pickup_postal"
+                                            class="block text-xs font-medium text-gray-400 mb-1">Postal Code <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="pickup_postal" name="pickup_postal"
+                                            class="pickup-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="T2P 1J9">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination Location Group -->
+                            <div id="destination-field" class="hidden">
+                                <h4
+                                    class="text-white font-semibold mb-3 border-b border-white/10 pb-2 text-sm tracking-wide">
+                                    Destination Location</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="sm:col-span-2">
+                                        <label for="destination_street"
+                                            class="block text-xs font-medium text-gray-400 mb-1">Street Address <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="destination_street" name="destination_street"
+                                            class="dest-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="456 Target Rd">
+                                    </div>
+                                    <div>
+                                        <label for="destination_city"
+                                            class="block text-xs font-medium text-gray-400 mb-1">City <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="destination_city" name="destination_city"
+                                            class="dest-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="Vancouver">
+                                    </div>
+                                    <div>
+                                        <label for="destination_province"
+                                            class="block text-xs font-medium text-gray-400 mb-1">Province <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="destination_province" name="destination_province"
+                                            class="dest-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="BC">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="destination_postal"
+                                            class="block text-xs font-medium text-gray-400 mb-1">Postal Code <span
+                                                class="text-brand-accent">*</span></label>
+                                        <input type="text" id="destination_postal" name="destination_postal"
+                                            class="dest-req w-full px-4 py-3 bg-brand-dark/50 border border-white/10 rounded-lg text-white focus:ring-1 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all placeholder-gray-600 text-sm"
+                                            placeholder="V6B 1A1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div>
-                            <label for="images" class="block text-sm font-medium text-gray-300 mb-1">Upload Images
+                            <label for="images" class="block text-sm font-medium text-gray-300 mb-1 mt-2">Upload Images
                                 (Optional)</label>
                             <input type="file" id="images" name="images" multiple accept="image/*"
                                 class="w-full px-4 py-2 bg-brand-dark/50 border border-white/10 rounded-lg text-gray-400 focus:outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-white/10 file:text-white hover:file:bg-brand-accent hover:file:text-white cursor-pointer text-sm">
@@ -690,6 +776,45 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Restrict Move Date to future dates only
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // Dynamic Form Logic for Address Fields
+        const movingTypeSelect = document.getElementById('moving_type');
+        const addressFields = document.getElementById('address-fields');
+        const pickupInputs = document.querySelectorAll('.pickup-req');
+        const destinationField = document.getElementById('destination-field');
+        const destInputs = document.querySelectorAll('.dest-req');
+
+        movingTypeSelect.addEventListener('change', function () {
+            const val = this.value;
+            if (val) {
+                // Show Pickup Address for any selection
+                addressFields.classList.remove('hidden');
+                pickupInputs.forEach(input => input.required = true);
+
+                // Show Destination Address ONLY if Long Distance
+                if (val === 'Long Distance (Canada)') {
+                    destinationField.classList.remove('hidden');
+                    destInputs.forEach(input => input.required = true);
+                } else {
+                    destinationField.classList.add('hidden');
+                    destInputs.forEach(input => {
+                        input.required = false;
+                        input.value = ''; // Clear value if hidden
+                    });
+                }
+            } else {
+                // Hide all if nothing selected
+                addressFields.classList.add('hidden');
+                pickupInputs.forEach(input => input.required = false);
+                destinationField.classList.add('hidden');
+                destInputs.forEach(input => input.required = false);
+            }
+        });
 
         // Navbar Scroll
         const navbar = document.getElementById('navbar');
@@ -818,7 +943,7 @@
             document.getElementById('form-message').classList.add('hidden');
 
             // Obfuscated Google Apps Script Web App URL
-            const encodedUrl = 'aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3TWxVU3ozanlWaE5IUk5SdXdlVTRjd2NmeTgyR1A0YVRFWjgzT0lIN3hVWjBNQkluWnhrektreVdRQmxwZHk0YW1XUS9leGVj';
+            const encodedUrl = 'aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5LXI5TU5aRFhZWWhfSDU4SlN0NFV0RWNKZ3I0SmdoRVlhcE1JU08xQ1lwanhEb2ZDMGkwcVh4T3Q1blRzanBZUC01dy9leGVj';
             const APPS_SCRIPT_URL = atob(encodedUrl);
 
             try {
@@ -840,17 +965,25 @@
 
                 const imageDataList = await Promise.all(Array.from(files).map(readFileAsBase64));
 
+                // Updated Payload with Granular Address Fields
                 const payload = {
                     name: form.name.value,
                     phone: form.phone.value,
                     email: form.email.value,
                     moving_type: form.moving_type.value,
                     date: form.date.value,
+                    pickup_street: form.pickup_street ? form.pickup_street.value : '',
+                    pickup_city: form.pickup_city ? form.pickup_city.value : '',
+                    pickup_province: form.pickup_province ? form.pickup_province.value : '',
+                    pickup_postal: form.pickup_postal ? form.pickup_postal.value : '',
+                    destination_street: form.destination_street ? form.destination_street.value : '',
+                    destination_city: form.destination_city ? form.destination_city.value : '',
+                    destination_province: form.destination_province ? form.destination_province.value : '',
+                    destination_postal: form.destination_postal ? form.destination_postal.value : '',
                     message: form.message.value,
                     images: imageDataList
                 };
 
-                // Executing the fetch request directly (dead code removed)
                 await fetch(APPS_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
