@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | SAM MOVERS</title>
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0a',
+                            charcoal: '#141414',
+                            slate: '#242424',
+                            accent: '#FF4500',
+                            accentHover: '#E03E00'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white flex flex-col justify-center items-center min-h-screen bg-brand-dark">
+
+    <div class="relative z-10 max-w-2xl mx-auto px-4 text-center flex flex-col items-center">
+        <!-- Logo Icon -->
+        <i class="fa-solid fa-truck-fast text-brand-accent text-6xl mb-6"></i>
+        
+        <h1 class="text-7xl md:text-9xl font-black text-white leading-none mb-4 tracking-tight">
+            404
+        </h1>
+        
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-200 mb-6">
+            Looks like you took a wrong turn.
+        </h2>
+        
+        <p class="text-lg text-gray-400 mb-10 max-w-md mx-auto font-light leading-relaxed">
+            The page you are looking for has been moved, deleted, or possibly never existed.
+        </p>
+
+        <a href="/" class="inline-flex justify-center items-center px-8 py-4 text-lg font-bold rounded-lg text-white bg-brand-accent hover:bg-brand-accentHover transition duration-300 shadow-[0_0_20px_rgba(255,69,0,0.3)] hover:shadow-[0_0_30px_rgba(255,69,0,0.5)]">
+            Back to Homepage <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+
+</body>
+</html>
