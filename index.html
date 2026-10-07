@@ -509,6 +509,12 @@
 
                 <div class="w-full lg:w-2/3 p-8 md:p-10">
                     <form id="quote-form" class="space-y-5" onsubmit="submitForm(event);">
+                        <!-- Hidden honeypot field added here -->
+                        <div style="display:none;">
+                            <label for="bot-check">Leave this field blank</label>
+                            <input type="text" id="bot-check" name="bot-check">
+                        </div>
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name <span
@@ -782,17 +788,28 @@
 
         async function submitForm(event) {
             event.preventDefault();
+            const form = event.target;
+
+            // Honeypot Bot Check added here
+            const honeypot = document.getElementById('bot-check').value;
+            if (honeypot !== "") {
+                // Silently pretend it worked to fool the bot
+                showMessage('<i class="fa-solid fa-circle-check mr-2"></i> Request sent! We will contact you shortly to confirm your move details.');
+                form.reset();
+                return;
+            }
+
             const btn = document.getElementById('submit-btn');
             const originalText = btn.innerHTML;
             btn.innerHTML = 'Processing... <i class="fa-solid fa-spinner fa-spin ml-2"></i>';
             btn.disabled = true;
             document.getElementById('form-message').classList.add('hidden');
 
-            // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE:
-            const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxcB9RC4PypY9rwKMvPeh-bgwb897TW6RYdyTbvfqWWOmmGUEye6Rn5jAeUN9jXVKgy/exec';
+            // Obfuscated Google Apps Script Web App URL
+            const encodedUrl = 'aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3TWxVU3ozanlWaE5IUk5SdXdlVTRjd2NmeTgyR1A0YVRFWjgzT0lIN3hVWjBNQkluWnhrektreVdRQmxwZHk0YW1XUS9leGVj';
+            const APPS_SCRIPT_URL = atob(encodedUrl);
 
             try {
-                const form = event.target;
                 const fileInput = document.getElementById('images');
                 const files = fileInput ? fileInput.files : [];
 
