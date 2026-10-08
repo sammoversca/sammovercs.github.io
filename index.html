@@ -239,7 +239,7 @@
                     <a href="#reviews"
                         class="text-sm font-semibold hover:text-brand-accent transition-colors">Reviews</a>
                     <a href="#contact"
-                        class="px-5 py-2 bg-brand-accent hover:bg-brand-accentHover text-white rounded-md font-bold transition-colors shadow-lg shadow-brand-accent/20">Get
+                        class="px-5 py-2 bg-brand-accent hover:bg-brand-accentHover text-brand-dark rounded-md font-bold transition-colors shadow-lg shadow-brand-accent/20">Get
                         Quote</a>
                 </nav>
 
@@ -304,7 +304,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
                     <a href="#contact"
-                        class="inline-flex justify-center items-center px-8 py-4 text-lg font-bold rounded-lg text-white bg-brand-accent hover:bg-brand-accentHover transition duration-300 shadow-[0_0_20px_rgba(255,69,0,0.3)] hover:shadow-[0_0_30px_rgba(255,69,0,0.5)] w-full sm:w-auto">
+                        class="inline-flex justify-center items-center px-8 py-4 text-lg font-bold rounded-lg text-brand-dark bg-brand-accent hover:bg-brand-accentHover transition duration-300 shadow-[0_0_20px_rgba(255,69,0,0.3)] hover:shadow-[0_0_30px_rgba(255,69,0,0.5)] w-full sm:w-auto">
                         Get a Free Quote <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
                     <a href="#services"
@@ -719,7 +719,7 @@
                             </div>
 
                             <button type="submit" id="submit-btn"
-                                class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-4 px-8 rounded-lg transition duration-300 shadow-lg shadow-brand-accent/20 flex items-center justify-center">
+                                class="w-full bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold py-4 px-8 rounded-lg transition duration-300 shadow-lg shadow-brand-accent/20 flex items-center justify-center">
                                 Submit Request <i class="fa-solid fa-paper-plane ml-2"></i>
                             </button>
                         </form>
@@ -822,7 +822,7 @@
         </div>
         <div class="flex items-center space-x-2 shrink-0">
             <button id="pwa-install-btn"
-                class="bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold py-2 px-3.5 rounded-lg transition-colors shadow-md">
+                class="bg-brand-accent hover:bg-brand-accentHover text-brand-dark text-xs font-bold py-2 px-3.5 rounded-lg transition-colors shadow-md">
                 Install
             </button>
             <button id="pwa-dismiss-btn" aria-label="Dismiss Install Prompt"
@@ -1073,11 +1073,18 @@
         const dismissBtn = document.getElementById('pwa-dismiss-btn');
         const bannerText = document.getElementById('pwa-banner-text');
 
+        // 1. Check if the user previously dismissed the prompt
+        const isDismissed = localStorage.getItem('pwaPromptDismissed') === 'true';
+
         // Android / Chrome / Edge
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            installBanner.classList.remove('hidden');
+
+            // 2. Only show the banner if it hasn't been dismissed
+            if (!isDismissed) {
+                installBanner.classList.remove('hidden');
+            }
         });
 
         installBtn.addEventListener('click', async () => {
@@ -1093,15 +1100,18 @@
         const isIos = () => /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
         const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
-        if (isIos() && !isInStandaloneMode()) {
+        // 3. Apply the same dismissal check for iOS devices
+        if (isIos() && !isInStandaloneMode() && !isDismissed) {
             // Show iOS manual instructions
-            bannerText.innerHTML = 'Tap <i class="fa-solid fa-arrow-up-from-bracket mx-1 text-white"></i> then <b>"Add to Home Screen"</b>';
+            bannerText.innerHTML = 'Tap <i class="fa-solid fa-arrow-up-from-bracket mx-1 text-brand-dark"></i> then <b>"Add to Home Screen"</b>';
             installBtn.classList.add('hidden');
             installBanner.classList.remove('hidden');
         }
 
         dismissBtn.addEventListener('click', () => {
             installBanner.classList.add('hidden');
+            // 4. Save the dismissal state to local storage
+            localStorage.setItem('pwaPromptDismissed', 'true');
         });
     </script>
 </body>
