@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" as="image" href="house.avif" fetchpriority="high">
+    <link rel="preload" as="image" href="house.webp" fetchpriority="high">
 
     <!-- PWA Manifest & Theme Settings -->
     <link rel="manifest" href="/manifest.json">
@@ -35,7 +35,7 @@
     <meta property="og:title" content="SAM MOVERS | Local & Long Distance Calgary Movers">
     <meta property="og:description"
         content="Precision, Power, and Peace of Mind. Get a free quote from SAM MOVERS for local Calgary moves, long-distance Canada hauls, same-day service, and junk removal.">
-    <meta property="og:image" content="house.avif">
+    <meta property="og:image" content="house.webp">
 
     <!-- Schema.org for MovingCompany -->
     <script type="application/ld+json">
@@ -123,13 +123,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional"
-        rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter (Non-blocking) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional"
+        media="print" onload="this.media='all'">
+
+    <!-- FontAwesome (Non-blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=optional">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -277,7 +283,7 @@
             class="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-brand-dark pt-20">
             <div class="absolute inset-0 z-0">
                 <!-- SEO Improvement: Descriptive alt text with keywords -->
-                <img src="house.avif" fetchpriority="high" loading="eager"
+                <img src="house.webp" fetchpriority="high" loading="eager"
                     alt="SAM Movers Calgary Moving Truck - Local and Long Distance Services"
                     class="w-full h-full object-cover opacity-20 object-center" />
                 <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/90 via-brand-dark/80 to-brand-dark"></div>
