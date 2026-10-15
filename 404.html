@@ -132,36 +132,30 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google tag (gtag.js) & Unified Conversion Tracking -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWXWJWYXG3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-NWXWJWYXG3');
+    </script>
 
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
         function gtagSendEvent(url) {
-            var navigated = false;
             var callback = function () {
-                if (!navigated && typeof url === 'string' && url.length > 0) {
-                    navigated = true;
+                if (typeof url === 'string') {
                     window.location = url;
                 }
             };
-            if (typeof gtag === 'function') {
-                gtag('event', 'ads_conversion_Request_quote_1', {
-                    'event_callback': callback,
-                    'event_timeout': 2000
-                });
-                gtag('event', 'conversion_event_request_quote_1', {
-                    'event_timeout': 2000
-                });
-                gtag('event', 'conversion_event_request_quote', {
-                    'event_timeout': 2000
-                });
-            } else if (typeof url === 'string' && url.length > 0) {
-                window.location = url;
-            }
+            gtag('event', 'conversion_event_request_quote_3', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+                // <event_parameters>
+            });
             return false;
         }
     </script>
