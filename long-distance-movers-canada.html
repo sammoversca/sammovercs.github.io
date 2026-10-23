@@ -54,124 +54,189 @@
 
   <!-- Structured Data (Schema.org JSON-LD) -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MovingCompany",
-      "@id": "https://www.sammovers.ca/#organization",
-      "name": "SAM MOVERS",
-      "alternateName": "SAM Movers Calgary",
-      "description": "Licensed and insured Calgary movers providing local residential and commercial moving, same-day emergency moves, junk and furniture removal, and long-distance moving across Canada with zero hidden fees.",
-      "url": "https://www.sammovers.ca/",
-      "logo": "https://www.sammovers.ca/icon-192.png",
-      "image": "https://www.sammovers.ca/house.webp",
-      "email": "contact@sammovers.ca",
-      "telephone": [
+{
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "@id": "https://www.sammovers.ca/#organization",
+    "name": "SAM MOVERS",
+    "alternateName": "SAM Movers Calgary",
+    "description": "Licensed and insured Calgary movers providing local residential and commercial moving, same-day emergency moves, junk and furniture removal, Calgary snow removal, and long-distance moving across Canada with zero hidden fees.",
+    "url": "https://www.sammovers.ca/",
+    "logo": "https://www.sammovers.ca/icon-192.png",
+    "image": "https://www.sammovers.ca/house.webp",
+    "email": "contact@sammovers.ca",
+    "telephone": [
         "+1-403-633-9190"
-      ],
-      "priceRange": "$$",
-      "address": {
+    ],
+    "priceRange": "$$",
+    "address": {
         "@type": "PostalAddress",
         "addressLocality": "Calgary",
         "addressRegion": "AB",
         "addressCountry": "CA"
-      },
-      "geo": {
+    },
+    "geo": {
         "@type": "GeoCoordinates",
         "latitude": 51.0447,
         "longitude": -114.0719
-      },
-      "openingHoursSpecification": [
+    },
+    "openingHoursSpecification": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "07:00",
-          "closes": "21:00"
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "07:00",
+            "closes": "21:00"
         }
-      ],
-      "areaServed": [
-        { "@type": "City", "name": "Calgary" },
-        { "@type": "City", "name": "Airdrie" },
-        { "@type": "City", "name": "Cochrane" },
-        { "@type": "City", "name": "Okotoks" },
-        { "@type": "City", "name": "Chestermere" },
-        { "@type": "AdministrativeArea", "name": "Alberta" },
-        { "@type": "Country", "name": "Canada" }
-      ],
-      "currenciesAccepted": "CAD",
-      "paymentAccepted": "Cash, Credit Card, Interac e-Transfer",
-      "aggregateRating": {
+    ],
+    "areaServed": [
+        {
+            "@type": "City",
+            "name": "Calgary"
+        },
+        {
+            "@type": "City",
+            "name": "Airdrie"
+        },
+        {
+            "@type": "City",
+            "name": "Cochrane"
+        },
+        {
+            "@type": "City",
+            "name": "Okotoks"
+        },
+        {
+            "@type": "City",
+            "name": "Chestermere"
+        },
+        {
+            "@type": "AdministrativeArea",
+            "name": "Alberta"
+        },
+        {
+            "@type": "Country",
+            "name": "Canada"
+        }
+    ],
+    "currenciesAccepted": "CAD",
+    "paymentAccepted": "Cash, Credit Card, Interac e-Transfer",
+    "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
         "reviewCount": "42"
-      },
-      "makesOffer": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Local Calgary Movers & Residential Moving", "url": "https://www.sammovers.ca/calgary-movers.html" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Same-Day & Emergency Movers Calgary", "url": "https://www.sammovers.ca/same-day-movers-calgary.html" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Calgary Junk Removal & Furniture Hauling", "url": "https://www.sammovers.ca/junk-removal-calgary.html" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Long Distance Moving Across Canada", "url": "https://www.sammovers.ca/long-distance-movers-canada.html" } }
-      ]
-    }
-    </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+    },
+    "makesOffer": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "SAM MOVERS Calgary",
-          "item": "https://www.sammovers.ca/"
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Local Calgary Movers & Residential Moving",
+                "url": "https://www.sammovers.ca/calgary-movers.html"
+            }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Long-Distance Movers From Calgary Across Canada.",
-          "item": "https://www.sammovers.ca/long-distance-movers-canada.html"
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Same-Day & Emergency Movers Calgary",
+                "url": "https://www.sammovers.ca/same-day-movers-calgary.html"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Calgary Junk Removal & Furniture Hauling",
+                "url": "https://www.sammovers.ca/junk-removal-calgary.html"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Calgary Snow Removal & Driveway Clearing",
+                "url": "https://www.sammovers.ca/snow-removal-calgary.html"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Long Distance Moving Across Canada",
+                "url": "https://www.sammovers.ca/long-distance-movers-canada.html"
+            }
         }
-      ]
-    }
-    </script>
+    ]
+}
+  </script>
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
         {
-          "@type": "Question",
-          "name": "How are long-distance moves from Calgary priced?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Long-distance moving quotes are calculated transparently based on total highway distance between your pickup and destination postal codes, the size of your load, and the crew required for loading and unloading."
-          }
+            "@type": "ListItem",
+            "position": 1,
+            "name": "SAM MOVERS Calgary",
+            "item": "https://www.sammovers.ca/"
         },
         {
-          "@type": "Question",
-          "name": "Will my belongings be mixed with other families' items?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We prioritize dedicated, direct transport so your furniture stays safely secured in the same truck with our trusted crew from pickup in Calgary to unloading at your destination."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you protect furniture on long highway trips?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every item is wrapped in thick padded moving blankets, sealed with industrial stretch wrap, and strapped tightly to the truck rails so nothing shifts on mountain roads."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How early should I book a long-distance move from Calgary?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We recommend booking 2 to 4 weeks ahead for interprovincial moves to BC, Saskatchewan, or Ontario, though we can often accommodate urgent long-distance relocations on shorter notice."
-          }
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Long-Distance Movers From Calgary Across Canada.",
+            "item": "https://www.sammovers.ca/long-distance-movers-canada.html"
         }
-      ]
-    }
-    </script>
+    ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How are long-distance moves from Calgary priced?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Long-distance moving quotes are calculated transparently based on total highway distance between your pickup and destination postal codes, the size of your load, and the crew required for loading and unloading."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Will my belongings be mixed with other families' items?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We prioritize dedicated, direct transport so your furniture stays safely secured in the same truck with our trusted crew from pickup in Calgary to unloading at your destination."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do you protect furniture on long highway trips?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every item is wrapped in thick padded moving blankets, sealed with industrial stretch wrap, and strapped tightly to the truck rails so nothing shifts on mountain roads."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How early should I book a long-distance move from Calgary?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recommend booking 2 to 4 weeks ahead for interprovincial moves to BC, Saskatchewan, or Ontario, though we can often accommodate urgent long-distance relocations on shorter notice."
+            }
+        }
+    ]
+}
+  </script>
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,11 +277,15 @@
           window.location = url;
         }
       };
-      gtag('event', 'conversion_event_request_quote_3', {
-        'event_callback': callback,
-        'event_timeout': 2000,
-        // <event_parameters>
-      });
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion_event_request_quote_3', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+          // <event_parameters>
+        });
+      } else if (typeof url === 'string') {
+        window.location = url;
+      }
       return false;
     }
   </script>
@@ -227,7 +296,7 @@
   <header id="navbar" class="site-navbar text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center">
-        <a href="index.html" class="flex items-center cursor-pointer shrink-0" aria-label="SAM MOVERS Calgary Home">
+        <a href="/" class="flex items-center cursor-pointer shrink-0" aria-label="SAM MOVERS Calgary Home">
           <i class="fa-solid fa-truck-fast text-brand-accent text-3xl mr-3"></i>
           <div>
             <span class="text-2xl font-extrabold tracking-wider uppercase text-white m-0 leading-none block">SAM
@@ -243,6 +312,8 @@
             class="text-sm font-semibold hover:text-brand-accent transition-colors">Same-Day Moving</a>
           <a href="junk-removal-calgary.html"
             class="text-sm font-semibold hover:text-brand-accent transition-colors">Junk Removal</a>
+          <a href="snow-removal-calgary.html"
+            class="text-sm font-semibold hover:text-brand-accent transition-colors">Snow Removal</a>
           <a href="long-distance-movers-canada.html"
             class="text-sm font-semibold text-brand-accent transition-colors">Long Distance</a>
           <a href="tel:403-633-9190" onclick="gtagSendEvent('tel:403-633-9190');"
@@ -269,7 +340,7 @@
     <div id="mobile-menu"
       class="hidden md:hidden absolute w-full left-0 top-full bg-brand-dark border-b border-white/10 shadow-2xl">
       <div class="px-4 py-4 space-y-1">
-        <a href="index.html"
+        <a href="/"
           class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/5">Home</a>
         <a href="calgary-movers.html"
           class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/5">Local Calgary
@@ -279,6 +350,9 @@
           &amp; Emergency Movers</a>
         <a href="junk-removal-calgary.html"
           class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/5">Calgary Junk
+          Removal</a>
+        <a href="snow-removal-calgary.html"
+          class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/5">Calgary Snow
           Removal</a>
         <a href="long-distance-movers-canada.html"
           class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-white hover:bg-white/5">Long-Distance
@@ -344,7 +418,7 @@
                 class="inline-flex justify-center items-center px-8 py-4 text-lg font-bold rounded-lg text-brand-dark bg-brand-accent hover:bg-brand-accentHover transition duration-300 shadow-[0_0_20px_rgba(255,69,0,0.3)] w-full sm:w-auto">
                 <i class="fa-solid fa-phone mr-2"></i> Call 403-633-9190
               </a>
-              <a href="index.html#services"
+              <a href="/#services"
                 class="inline-flex justify-center items-center px-6 py-4 border border-white/20 text-base font-bold rounded-lg text-white hover:bg-white/10 transition duration-300 w-full sm:w-auto backdrop-blur-sm">
                 View All Services
               </a>
@@ -397,12 +471,13 @@
                   <label for="moving_type" class="quote-label">Service Needed <span
                       class="text-brand-accent">*</span></label>
                   <div class="relative">
-                    <select id="moving_type" name="moving_type" required class="quote-select">
+                    <select id="moving_type" name="moving_type" required class="quote-select" disabled>
                       <option value="" disabled>Select service...</option>
                       <option value="Local (Calgary)">Local (Calgary)</option>
                       <option value="Same Day (Calgary)">Same Day (Calgary)</option>
                       <option value="Long Distance (Canada)" selected>Long Distance (Canada)</option>
-                      <option value="Junk Removal">Junk Removal</option>
+                      <option value="Junk Removal">Junk Removal (Calgary)</option>
+                      <option value="Snow Removal (Calgary)">Snow Removal (Calgary)</option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
                       <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -487,7 +562,8 @@
               <div>
                 <label for="images" class="quote-label">Upload Photos (Optional)</label>
                 <input type="file" id="images" name="images" multiple accept="image/*" class="quote-file-input">
-                <p class="text-xs text-gray-400 mt-1">Useful for bulky furniture items or junk removal quotes.</p>
+                <p class="text-xs text-gray-400 mt-1">Useful for bulky furniture items, junk piles, or driveway snow
+                  quotes.</p>
               </div>
 
               <!-- Row 5: Move or Junk Details -->
@@ -573,17 +649,17 @@
           <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Serving All Calgary Quadrants &amp;
             Surrounding Towns</h2>
           <p class="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
-            Whether you are moving out of a downtown high-rise condo, relocating a family home in the suburbs, or
-            clearing out a garage, our Calgary movers know every route, condo loading zone, and local disposal facility.
+            Whether you are moving out of a downtown high-rise condo, relocating a family home in the suburbs, clearing
+            out a garage, or booking Calgary snow removal, our local crews know every route and neighbourhood.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="glass-panel rounded-2xl p-8">
             <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-compass text-brand-accent mr-2"></i>NW
-              &amp; NE Calgary Movers</h3>
-            <p class="text-xs text-gray-400 mb-3">Fast residential, student, and apartment moving across Northern
-              Calgary:</p>
+              &amp; NE Calgary</h3>
+            <p class="text-xs text-gray-400 mb-3">Fast residential, student, apartment moving &amp; snow clearing across
+              Northern Calgary:</p>
             <div class="area-pill-grid">
               <span class="area-pill">Panorama Hills</span>
               <span class="area-pill">Tuscany</span>
@@ -603,8 +679,8 @@
           <div class="glass-panel rounded-2xl p-8">
             <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-city text-brand-accent mr-2"></i>SW,
               Downtown &amp; SE Calgary</h3>
-            <p class="text-xs text-gray-400 mb-3">Condo elevator moves, townhomes, and full-house relocations across
-              South &amp; Central Calgary:</p>
+            <p class="text-xs text-gray-400 mb-3">Condo elevator moves, townhomes, full-house relocations &amp; snow
+              removal across South &amp; Central Calgary:</p>
             <div class="area-pill-grid">
               <span class="area-pill">Beltline</span>
               <span class="area-pill">Downtown Calgary</span>
@@ -731,7 +807,7 @@
           </div>
           <p class="text-sm leading-relaxed max-w-xs mx-auto md:mx-0 mb-4">
             Precision, Power, and Peace of Mind. Licensed and insured Calgary movers for local residential, condo,
-            commercial, same-day moving, long-distance Canada relocations, and junk removal.
+            commercial, same-day moving, long-distance Canada relocations, junk removal, and Calgary snow removal.
           </p>
           <p class="text-sm font-bold text-white">
             <a href="tel:403-633-9190" onclick="gtagSendEvent('tel:403-633-9190');"
@@ -745,7 +821,7 @@
         </div>
 
         <div class="text-center md:text-left">
-          <h2 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Moving &amp; Hauling Services</h2>
+          <h2 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Moving &amp; Local Services</h2>
           <ul class="space-y-2 text-sm">
             <li><a href="calgary-movers.html" class="hover:text-brand-accent transition-colors">Local Calgary Movers</a>
             </li>
@@ -753,10 +829,12 @@
                 Last-Minute Movers Calgary</a></li>
             <li><a href="junk-removal-calgary.html" class="hover:text-brand-accent transition-colors">Calgary Junk,
                 Furniture &amp; Appliance Removal</a></li>
+            <li><a href="snow-removal-calgary.html" class="hover:text-brand-accent transition-colors">Calgary Snow
+                Removal &amp; Driveway Clearing</a></li>
             <li><a href="long-distance-movers-canada.html"
                 class="hover:text-brand-accent transition-colors">Long-Distance Movers Across Canada</a></li>
             <li><a href="#quote-box" class="text-brand-accent font-semibold hover:text-white transition-colors">Request
-                a Free Moving Estimate</a></li>
+                a Free Quote</a></li>
           </ul>
         </div>
 
@@ -808,7 +886,8 @@
         <p>We collect information you provide directly to us when requesting a quote. This includes your name,
           phone number, email address, move dates, addresses, and optional images.</p>
         <h3 class="text-white font-semibold text-base mt-4">2. How We Use Your Information</h3>
-        <p>We use this data strictly to provide accurate quotes, schedule moving or junk removal services, and
+        <p>We use this data strictly to provide accurate quotes, schedule moving, junk removal, or snow removal
+          services, and
           communicate with you
           regarding your booking.</p>
       </div>
